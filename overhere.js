@@ -9,7 +9,7 @@ var trackAdvance = undefined;
 
 function getTracks () {
     $.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + 
-            user + '&api_key=' + lastfmApiKey + '&format=json&callback=?',
+            user + '&api_key=' + lastfmApiKey + '&nowplaying=true&format=json&callback=?',
 
         function (data) {
             if ('recenttracks' in data && 'track' in data.recenttracks) {
